@@ -6,6 +6,8 @@ namespace CodeCool.SeasonalProductDiscounter.Service.Products.Provider;
 public class ProductProvider : IProductProvider
 {
     public IEnumerable<Product> Products { get; }
+    public double MinProductPrice { get; }
+    public double MaxProductPrice { get; }
 
     public ProductProvider()
     {

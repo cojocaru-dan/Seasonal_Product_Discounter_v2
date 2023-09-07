@@ -15,8 +15,9 @@ public class ProductsUi
     public void Run()
     {
         PrintProducts("Shirts", _productBrowser.GetByName("skirt"));
-
-        //...
+        PrintProducts("Order By Name", _productBrowser.OrderByName());
+        PrintProducts("Order By Price", _productBrowser.OrderByPrice());
+        PrintProducts("Get By Price Range Between 70 and 80", _productBrowser.GetByPriceRange(70, 80));
     }
 
     private static void PrintProducts(string text, IEnumerable<Product> products)
