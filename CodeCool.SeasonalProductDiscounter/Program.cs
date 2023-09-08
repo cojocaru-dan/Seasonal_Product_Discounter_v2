@@ -5,13 +5,14 @@ using CodeCool.SeasonalProductDiscounter.Ui;
 
 var productProvider = new RandomProductGenerator(10, 50, 100);
 IProductBrowser productBrowser = new ProductBrowser(productProvider);
-// IProductStatistics productStatistics = null;
+IProductStatistics productStatistics = new ProductStatistics(productProvider);
 
-var productsUi = new ProductsUi(productBrowser);
-// var statisticsUi = new StatisticsUi(productStatistics);
+// var productsUi = new ProductsUi(productBrowser);
+var statisticsUi = new StatisticsUi(productStatistics);
 
-productsUi.Run();
+// productsUi.Run();
 // foreach (var product in productProvider.Products)
 // {
 //     Console.WriteLine(product);
 // }
+statisticsUi.Run();
